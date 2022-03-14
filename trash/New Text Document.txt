@@ -1,0 +1,125 @@
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: #8a2b06;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 0px 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Noto Kufi Arabic, sans-serif;
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    button {
+      cursor: pointer;
+      border: none;
+      color: white;
+      background-color: #4d1601;
+      padding: 0.75rem 3rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+    li {
+      margin-left: 3rem;
+      display: inline-block;
+    }
+  }
+  .logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+box-sizing: border-box;
+}
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    background-color: #4d1601;
+    color: white;
+    >*{
+        flex: 1 100%;
+    }
+}
+div{
+    display: block;
+}
+*{
+    box-sizing: border-box;
+    font-family: Noto Kufi Arabic,sans-serif;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.headFooter{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 25px;
+
+    .aboutFooter{
+        text-align: right;
+        margin-right: 1.5em;
+        margin-bottom: 2em;
+        padding-left: 10px;
+        border-left: 1px solid rgba(209,209,209,.11);
+ 
+    }
+    .socialFooter{
+        flex: 1;
+        align-items: center;        
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+        a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 10px;
+        }
+    
+}
+
+.footFooter{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid rgba(209,209,209,.11);    
+}
