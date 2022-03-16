@@ -4,6 +4,7 @@
 	padding:0;
 	box-sizing: border-box;
     font-family: "Cairo", sans-serif;
+
 }
 .header {
   display: flex;
@@ -12,8 +13,9 @@
   background-color: rgb(1, 1, 126);
   width: 100%;
   height: 5rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: large;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .logo {
   padding: 10px;
@@ -53,7 +55,8 @@
   flex-direction: row-reverse;
   &:hover,
   &:active {
-    background-color: rgb(4, 69, 189);
+    background-color: #3d4dd6;
+
   }
 }
 .icon {
@@ -64,7 +67,7 @@
 .footer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: rgb(1, 1, 126);
     color: white;
@@ -107,4 +110,172 @@ a{
     display: flex;
     padding: 5px;
     align-self: end center;
+}
+.home{
+  img{
+  width:100%;
+  max-height: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+}
+.eshtry_container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: right;
+  .eshtry_main{
+    display: flex;
+  flex-direction: row-reverse;
+  margin: 60px 0;
+  }
+    .eshtry_content{
+    padding-left: 20px;
+  }
+button{
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(74, 130, 250);
+  color: white;
+  font-size: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(74, 130, 250);
+    box-shadow: 7px 7px 7px rgba(101, 91, 255, 0.25);
+  }  
+
+}
+}
+.product_list{
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #efefef;
+  padding: 10px;
+  margin: 10px;
+  animation: product-appear 1s ease-out forwards;
+
+
+}
+.product{
+  text-align: center;
+  width: 300px; 
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  margin: 15px 0;
+  .img_container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+
+
+}
+@keyframes product-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.products_title{
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.card{
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.products_buttons{
+  flex-wrap: wrap;
+  padding-top: 10px;
+  .product_detail_button{
+    border: none;
+    
+    border-radius: 10px;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:hover{
+      background-color: rgb(74, 130, 250);
+      box-shadow: 7px 7px 7px rgba(101, 91, 255, 0.25);
+    }
+  }
+  .product_cart_button{
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(74, 130, 250);
+      box-shadow: 7px 7px 7px rgba(101, 91, 255, 0.25);
+    }
+  }
+  
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

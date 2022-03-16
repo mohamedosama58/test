@@ -5,14 +5,17 @@ const Footer = (props) => {
       <footer className="footer">
         <div className="above_footer">
         <div className="head_footer">
+          <section>
           <h3>معلومات عنا</h3>
           <p>
             موقع اشتري هو موقع مختص في عمليات البيع و الشراء عبر الانترنت , مع
             موقعنا يمكنك التسوق من خلال الانترنت بكل سهولة وامان و يوجد كل
             المنجات من جميع الفئات
           </p>
+          </section>
         </div>
         <div className="social_footer">
+          <section>
           <h3>اتصل بنا</h3>
           <div>
               <a href="https://facebook.com">
@@ -42,7 +45,9 @@ const Footer = (props) => {
                 <p>فيس بوك</p>
               </a>
         </div>
+        </section>
         </div>
+
         </div>
         <div className="foot_footer">
           <p>جميع الحقوق محفوظة موقع اشتري @ 2022</p>
