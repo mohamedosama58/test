@@ -1,7 +1,5 @@
-import { Fragment } from "react/cjs/react.production.min";
-import Card from "../UI/Card";
-import Product from "./Product";
-
+import ProductDetail from "../../components/Products/ProductDetail";
+import { useRouter } from "next/dist/client/router";
 const DUMMY_PRODUCTS = [
   {
     id: "p1",
@@ -95,22 +93,14 @@ const DUMMY_PRODUCTS = [
     price: 13000,
   },
 ];
-const AvailableProducts = (props) => {
-  const productList = DUMMY_PRODUCTS.map((product) => (
-    <Product
-      key={product.id}
-      id={product.id}
-      img={product.img}
-      description={product.description}
-      name={product.name}
-      price={product.price}
-    />
-  ));
 
-  return (
-    <Fragment>
-      <Card className="product_list">{productList}</Card>
-    </Fragment>
+const Details = () => {
+  const router = useRouter();
+  const id=router.query.product_id;
+  const filteredItemIndex = DUMMY_PRODUCTS.findIndex(
+    (item) => item.id === id
   );
+  const filteredItem=DUMMY_PRODUCTS[filteredItemIndex];
+  return <ProductDetail image={filteredItem.img} name={filteredItem.name} description={filteredItem.description} price={filteredItem.price} key={filteredItem.id}/>;
 };
-export default AvailableProducts;
+export default Details;

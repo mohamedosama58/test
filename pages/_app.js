@@ -4,6 +4,7 @@ import Header from "../components/UI/Header";
 import Footer from "../components/UI/Footer";
 import { Provider } from "react-redux";
 import store from "../components/store";
+import ShowCart from "../components/Cart/ShowCart";
 
 
 function MyApp({ Component, pageProps }) {
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Header />
+      <ShowCart/>
       <Component {...pageProps} />
       <Footer />
       </Provider>
